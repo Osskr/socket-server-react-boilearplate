@@ -3,7 +3,7 @@ const Server = require('./models/server')
 
 
 
-//Server 
+//server 
  const server = new Server()
  server.listen()
  

@@ -11,7 +11,7 @@ class Server{
         this.app = express();
         this.port = process.env.PORT;
 
-        //Http Server config
+        //Http Server config 
         this.server = require('http').createServer(this.app)
         
         //Socketio config
