@@ -1,8 +1,9 @@
 const express = require('express');
+const http = require('http')
 const socketio = require('socket.io')
 
 const path = require('path');
-const Sockets = require('../controllers/sockets.controller');
+const Sockets = require('../controllers/sockets');
 
 class Server{
     
@@ -12,7 +13,7 @@ class Server{
         this.port = process.env.PORT;
 
         //Http Server config 
-        this.server = require('http').createServer(this.app)
+        this.server = http.createServer(this.app)
         
         //Socketio config
         this.io = socketio(this.server, {/*configuraciones */})
